@@ -30,19 +30,6 @@ public class Pizza {
     }
 
     /**
-     * A constructor that takes a pizza object
-     * @param pizza, a Pizza object
-     */
-    public Pizza(Pizza pizza){
-        if (pizza == null)
-                return;
-        this.size = pizza.getSize();
-        this.numOfCheese = pizza.getNumOfCheese();
-        this.numOfPepp = pizza.getNumOfPepp();
-        this.numOfHam = pizza.getNumOfHam();
-    }
-
-    /**
      * @return the size of this pizza
      */
     public String getSize(){
@@ -99,7 +86,7 @@ public class Pizza {
      * Create a public method named calcCost( ) that returns a double that is the cost of the pizza.
      * @return the cost of the pizza
      */
-    public double calcCost(){
+    public double calcTotal(){
         double price;
         if (size == "small")
             price = 10 + 2 * numOfCheese + 2 * numOfPepp + 2 * numOfHam;
@@ -121,7 +108,7 @@ public class Pizza {
                 "The number of cheese toppings: " + numOfCheese +  "\n"  +
                 "The number of pepperoni toppings: " + numOfPepp + "\n" +
                 "The number of ham toppings: " + numOfHam + "\n" +
-                "Total cost: $" + calcCost();
+                "Cost: $" + calcTotal();
         return str;
     }
 
